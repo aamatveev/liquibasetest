@@ -1,0 +1,9 @@
+changeLogFile: @project.basedir@/src/main/resources/db/changelog/db.changelog-master.xml
+url: jdbc:sqlserver://localhost:1433;database=liquibase-test;
+username: liquibase
+password: liquibase
+driver: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+referenceUrl: hibernate:spring:xyz.matve.liquibasetest.entities?hibernate.dialect=org.hibernate.dialect.SQLServer2012Dialect&hibernate.physical_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy&hibernate.implicit_naming_strategy=org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+
+diffChangeLogFile: @project.basedir@/src/main/resources/db/changelog/db.changelog-@timestamp@.xml
